@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+html {
+  scroll-padding-top: 80px; /* adjust to your header’s height */
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Transparent header over video */
+header {
+  background-color: transparent; /* remove black bar */
+  color: #000; /* black text */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+/* Make header text & links black */
+header nav ul li a,
+header nav h1 {
+  color: #000; /* black text */
+  text-shadow: none; /* no shadow for black text */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #00b4ff;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+  background: transparent; /* no background, show video */
+}
+
+/* Home section text centre */
+#home {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: transparent; /* no background, show video */
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #0077ff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* White cards for projects */
+.project {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0077ff;
+  text-decoration: none;
+}
+
+/* Skills list items also light backgrounds */
+.skills-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.skills-list li {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+#contact .contact-links p {
+  margin-bottom: 0.7rem;
+}
+
+#contact .contact-links a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+#contact .contact-links i {
+  margin-right: 8px;
+  color: #0077ff;
+}
+
+/* Footer transparent text over video */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent; /* no bar */
+  color: #000; /* black text */
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Video background full screen */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* put behind everything */
+}
+
+/* Text colors inside cards and sections */
+h1, h2, p, li, a {
+  color: #000;
+}
